@@ -1,24 +1,21 @@
-# README
+Whtat we do:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- add geocoder
+- https://github.com/alexreisner/geocoder
 
-Things you may want to cover:
+temrinal:
 
-* Ruby version
+railc c
+result = Geocoder.search('Warsaw')
+result 
+result.first
+result.first.coordinates
 
-* System dependencies
+kyiv = Geocoder.search('Kyiv, Ukraine')
+kyiv
+kyiv.first.coordinates
 
-* Configuration
+Geocoder::Calculations.geographic_center([result.first.coordinates, kyiv.first.coordinates])
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You take this  51.43743165156015, 25.85815251571844 and paste in google search 
