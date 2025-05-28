@@ -31,3 +31,9 @@ latitude:float:index i longitude:float:index oznaczają: dodaj kolumny typu floa
 created seeds
 rails c
 Location.all
+
+
+***** ***** *****
+rails c
+Location.all
+Location.first.nearbys(10)
