@@ -27,3 +27,7 @@ You take this  51.43743165156015, 25.85815251571844 and paste in google search
 % rails g scaffold Location name address latitude:float:index longitude:float:index
 latitude:float:index i longitude:float:index oznaczają: dodaj kolumny typu float z indeksem.
 •	Indeksy pomagają przy szybszym wyszukiwaniu w bazie.
+
+created seeds
+rails c
+Location.all
