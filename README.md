@@ -1,24 +1,39 @@
-# README
+Whtat we do:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- add geocoder
+- https://github.com/alexreisner/geocoder
 
-Things you may want to cover:
+temrinal:
 
-* Ruby version
+railc c
+result = Geocoder.search('Warsaw')
+result 
+result.first
+result.first.coordinates
 
-* System dependencies
+kyiv = Geocoder.search('Kyiv, Ukraine')
+kyiv
+kyiv.first.coordinates
 
-* Configuration
+Geocoder::Calculations.geographic_center([result.first.coordinates, kyiv.first.coordinates])
 
-* Database creation
 
-* Database initialization
+You take this  51.43743165156015, 25.85815251571844 and paste in google search 
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+**** ***** ***** **** ***
+% rails g scaffold Location name address latitude:float:index longitude:float:index
+latitude:float:index i longitude:float:index oznaczają: dodaj kolumny typu float z indeksem.
+•	Indeksy pomagają przy szybszym wyszukiwaniu w bazie.
+
+created seeds
+rails c
+Location.all
+
+
+***** ***** *****
+rails c
+Location.all
+Location.first.nearbys(10)
